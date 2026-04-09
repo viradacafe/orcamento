@@ -1,0 +1,9 @@
+{
+  "name": "virada-orcamento",
+  "version": "1.0.0",
+  "description": "Ferramenta de levantamento de requisitos e orçamento — Virada no Café",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  }
+}

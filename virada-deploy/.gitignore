@@ -1,0 +1,13 @@
+# Chave de API — NUNCA commitar
+.env.local
+.env
+
+# Vercel
+.vercel
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
