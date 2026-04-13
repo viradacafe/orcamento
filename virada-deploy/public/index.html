@@ -352,7 +352,7 @@ Distribua as horas do time entre as etapas. Horas por cargo NÃO devem ultrapass
 Retorne APENAS JSON válido, sem markdown:
 {"titulo":"nome curto","tipo":"categoria","resumo_escopo":"2 frases","contexto_problema":"3 frases descrevendo a dor do cliente e por que precisa desta solução","arquitetura":[{"componente":"nome","descricao":"descrição técnica"}],"etapas":[{"nome":"etapa","horas_por_cargo":[{"cargo":"nome","horas":número}]}],"alertas":["alerta1"],"prazo_semanas_min":número,"prazo_semanas_max":número}`;
   try{
-    const res=await fetch(ANTHROPIC_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch(ANTHROPIC_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
     const data=await res.json();
     const txt=data.content.map(i=>i.text||'').join('');
     const orc=JSON.parse(txt.replace(/```json|```/g,'').trim());
